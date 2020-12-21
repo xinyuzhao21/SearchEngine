@@ -10,7 +10,5 @@ calculation and query processing. Within each package, there is also some level 
 encapsulate the high-level idea achieved through the abstract classes. By using abstract classes
 such as Fetcher, Document, Compression, and Tokenizer, the system can also avoid large
 refactoring.
-The trade-off of this design is that it would require more code to implement and thus more time.
-However, I hope that this design would make future modifications and Unit Testing/Debugging
-easier. Also, since I am not very familiar with the concepts, those plannings and abstractions
-would potentially become unnecessary overheads.
+
+
