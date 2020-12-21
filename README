@@ -1,3 +1,35 @@
+Instructions for downloading dependencies the code:
+1. Installed Java version 1.8+
+2. Installed the newest version of Eclipse or Intellij
+3. The two IDE mentioned should have bundled with Maven. If not, make sure to config the IDEs.
+4. The dependencies of the code would be automatically managed by Maven and IDE.
+
+Instructions for building the code:
+1. Unzip the zip file
+2. Open/Navigate to the "src/external_files" folder within the unzipped fold
+3. Copy all the files in the "src/external_files" folder and Paste them to the root folder of the project. 
+That is where this README file is located.There should be two extra file "pom.xml" and "shakespeare-scenes.json".
+4. Open IDE and Import this Maven project. 
+4.1 For Intellij, select "Import Project" at the Welcome Panel and select the root folder of the project (NOT src). 
+4.1.1 Select "Import  from external model" and select "Maven".
+4.1.2 Follow through the rest of import GUI and finish the import 
+4.2 For Eclipse, select "File"->"Import". 
+4.2.1 Select the root folder of the project (NOT src).
+4.2.2 Follow through the rest of import GUI and finish the import.
+5. The code would be correctly,automatically built when needed managed by the IDEs
+
+Instructions for running the code:
+1. Navigate to "\src\main\java\app" folder in your IDEs. The "app" package contains the executable java class with main methods.
+2. First, to build and create binary index. Run "IndexBuilder" class TWICE to create compressed and uncompressed binary index. 
+Look for green arrow buttons in the IDE to run this class. Or right click on this class and select Run. 
+To controll compressed or uncompressed format, you can pass down a command line parameter.
+Pass down 0 means uncompressed. Pass down 1 means compressed.
+To config the command line parameter, you need to go to "Run configurations" and edit "Arguments" in Eclipse.
+If you use Intellij, you can "Run" -> "Edit config" and change the "Program Arguments".
+3.Then, you can run other classes in the package within the IDE after the addition files are created.
+4.(optional) I have provide a folder "src\optional_files" that contains a copy of the index generated files. 
+If the IndexBuilder unfortunately did not execute correctly, please copy all the files in this folder to the root folder so that you can run the other classes of the app package.    
+
 The system supports basic index creation from a collection and retrieval with a simple retrieval
 method. The system also provides varies compression options. Structurally, the system is divided
 into packages based on the different stages of the abstract Indexing process. According to the
