@@ -1,0 +1,16 @@
+The system supports basic index creation from a collection and retrieval with a simple retrieval
+method. The system also provides varies compression options. Structurally, the system is divided
+into packages based on the different stages of the abstract Indexing process. According to the
+process, we have “fetch the documents”, “tokenize and transform the texts”, and “create the
+inverted list”. Thus, the system is naturally divided into the “fetcher”, “tokenizer”, “indexer”
+packages which contain multiple classes involved in each stage. To suit the need of this project,
+the system also has “IO” package for general file reading and writing, the “compression”
+package for V-byte and Delta encoding, and “retriever” and “scorer” for Dice coefficient
+calculation and query processing. Within each package, there is also some level of abstraction to
+encapsulate the high-level idea achieved through the abstract classes. By using abstract classes
+such as Fetcher, Document, Compression, and Tokenizer, the system can also avoid large
+refactoring.
+The trade-off of this design is that it would require more code to implement and thus more time.
+However, I hope that this design would make future modifications and Unit Testing/Debugging
+easier. Also, since I am not very familiar with the concepts, those plannings and abstractions
+would potentially become unnecessary overheads.
